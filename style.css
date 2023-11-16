@@ -366,3 +366,26 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* --------- Skillset ----------------------------------------------- */
+
+.companies {
+}
+.companies__container {
+  padding: 0 72px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.companies__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 140px;
+  border: 1px solid #181823;
+}
+@media screen and (max-width: 1439px) {
+  .companies__container {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
