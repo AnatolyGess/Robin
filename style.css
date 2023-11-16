@@ -36,6 +36,17 @@ body {
 .pink {
   color: #e95d90;
 }
+
+.title-subtitle__t {
+  font-size: 55px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.title-subtitle_s {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #8491a0;
+}
 /* --------- Common ----------------------------------------------- */
 
 .header {
@@ -296,3 +307,50 @@ body {
   }
 }
 /* --------- Philosophy ----------------------------------------------- */
+
+.skillset__container {
+  padding: 120px 120px 120px 72px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 72px;
+}
+.skillset__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 72px;
+  row-gap: 48px;
+}
+.skill-card__img {
+  margin-bottom: 24px;
+}
+.skill-card__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.skill-card__text {
+  line-height: 1.5;
+  color: #8491a0;
+  max-width: 368px;
+}
+@media screen and (max-width: 1439px) {
+  .skillset__container {
+    padding: 78px 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .skillset__container {
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skillset__container {
+    padding: 78px 20px;
+  }
+  .skillset__items {
+    grid-template-columns: 1fr;
+  }
+}
