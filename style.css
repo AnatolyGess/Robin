@@ -4,6 +4,9 @@ body {
   color: #fff;
   background-color: #000;
 }
+a {
+  color: inherit;
+}
 ._wrapper {
   margin: 0 auto;
   max-width: 1440px;
@@ -11,7 +14,7 @@ body {
 /* --------- General ----------------------------------------------- */
 
 /* Like name expirience section */
-.theme-and-title__top {
+.title {
   color: #8491a0;
   font-size: 16px;
   font-weight: 700;
@@ -19,12 +22,12 @@ body {
   text-transform: uppercase;
   margin-bottom: 8px;
 }
-.theme-and-title__bottom {
+.subtitle {
   font-size: 55px;
   font-weight: 700;
 }
 @media screen and (max-width: 767px) {
-  .theme-and-title__bottom {
+  .subtitle {
     font-size: 32px;
   }
 }
@@ -119,6 +122,17 @@ body {
     font-size: 32px;
   }
 }
+
+/* First in "My projects" */
+.button {
+  color: inherit;
+  font-size: 18px;
+  line-height: 1.5;
+  border: 1px solid #5221e6;
+  text-transform: uppercase;
+  background-color: inherit;
+  cursor: pointer;
+}
 /* --------- Common blocks----------------------------------------------- */
 
 .header {
@@ -134,6 +148,7 @@ body {
   align-items: center;
   min-height: 88px;
   padding: 0 72px;
+  max-width: 1296px;
 }
 .header__list {
   display: flex;
@@ -268,25 +283,23 @@ body {
 }
 .expirience__list {
   margin-top: 40px;
-}
-.works {
   display: flex;
   column-gap: 100px;
 }
-.works__item {
+.item-expirience {
   flex: 0 1 33.333%;
 }
-.works__number {
+.item-expirience__number {
   color: #8491a0;
   font-size: 117px;
 }
-.works__title {
+.item-expirience__title {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
   margin-bottom: 22px;
 }
-.works__text {
+.item-expirience__text {
   line-height: 1.5;
   color: #8491a0;
   max-width: 360px;
@@ -300,14 +313,14 @@ body {
   .expirience__container {
     padding: 48px 20px;
   }
-  .works {
+  .expirience__list {
     flex-direction: column;
     row-gap: 40px;
   }
-  .works__item {
+  .item-expirience {
     flex: 0 1 100%;
   }
-  .works__text {
+  .item-expirience__text {
     max-width: none;
   }
 }
@@ -365,6 +378,11 @@ body {
   .skillset__items {
     grid-template-columns: 1fr;
   }
+  .skill-card__text {
+    line-height: 1.5;
+    color: #8491a0;
+    max-width: none;
+  }
 }
 /* --------- Skillset ----------------------------------------------- */
 
@@ -391,36 +409,65 @@ body {
 
 .projects__container {
   padding: 120px 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
-.projects__title {
+.project__col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 }
 .projects__item {
+  transition: transform 0.3s;
+}
+.projects__item:hover {
+  transform: scale(0.99);
 }
 
-.example-item {
-  overflow: hidden;
-}
-.example-item__img {
-  width: 100%;
-  overflow: hidden;
-}
-.example-item__img img {
+.card-projects__img img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.example-item__text {
+.card-projects__text {
   padding: 40px 32px;
   background-color: #181823;
 }
-.example-item__title {
+.card-projects__title {
   margin-bottom: 13px;
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
 }
-.example-item__subtitle {
+.card-projects__subtitle {
   color: #8491a0;
   font-size: 18px;
   line-height: 1.5;
+}
+.projects__btn {
+  padding: 24px 32px;
+  margin: auto;
+  transition: transform 0.3s;
+}
+.projects__btn:hover {
+  transform: scale(0.99);
+  background-color: #181823;
+}
+@media screen and (max-width: 1439px) {
+  .projects__container {
+    padding: 80px 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .projects__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  .projects__container {
+    padding: 40px 20px;
+  }
 }
