@@ -368,8 +368,6 @@ body {
 }
 /* --------- Skillset ----------------------------------------------- */
 
-.companies {
-}
 .companies__container {
   padding: 0 72px;
   display: grid;
@@ -388,4 +386,41 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
+}
+/* --------- Companies ----------------------------------------------- */
+
+.projects__container {
+  padding: 120px 72px;
+}
+.projects__title {
+}
+.projects__item {
+}
+
+.example-item {
+  overflow: hidden;
+}
+.example-item__img {
+  width: 100%;
+  overflow: hidden;
+}
+.example-item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.example-item__text {
+  padding: 40px 32px;
+  background-color: #181823;
+}
+.example-item__title {
+  margin-bottom: 13px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.example-item__subtitle {
+  color: #8491a0;
+  font-size: 18px;
+  line-height: 1.5;
 }
