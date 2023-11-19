@@ -49,10 +49,15 @@ a {
   font-weight: 700;
   margin-bottom: 24px;
 }
-.title-subtitle_s {
+.title-subtitle__s {
   font-size: 18px;
   line-height: 1.5;
   color: #8491a0;
+}
+@media screen and (max-width: 767px) {
+  .title-subtitle__t {
+    font-size: 32px;
+  }
 }
 
 /* Link with the line like "More about me" in philosophy*/
@@ -510,3 +515,70 @@ a {
   }
 }
 /* --------- Dribbble ----------------------------------------------- */
+
+.feedback__container {
+  padding: 120px 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.feedback__col:not(:last-child) {
+  margin-bottom: 68px;
+}
+.feedback__subtitle:not(:last-child) {
+  margin-bottom: 40px;
+}
+.card-feedback:not(:last-child) {
+  margin-bottom: 100px;
+}
+.card-feedback__image img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  min-height: 360px;
+}
+.card-feedback__content {
+  padding: 64px;
+  border: 1px solid #5b6876;
+  border-top: none;
+}
+.card-feedback__top {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 64px;
+}
+.card-feedback__bottom {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #5b6876;
+}
+@media screen and (max-width: 1439px) {
+  .feedback__container {
+    padding: 80px 40px;
+  }
+  .card-feedback__content {
+    padding: 52px;
+  }
+  .card-feedback:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card-feedback__content {
+    padding: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .feedback__container {
+    padding: 50px 20px;
+    display: block;
+  }
+  .card-feedback:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .feedback__title {
+    margin-bottom: 16px;
+  }
+}
