@@ -13,6 +13,6 @@ function galleryToggler(event) {
         e.classList.remove('gallery__images--active');
     });
 
-    let text = document.querySelector('.gallery__tag.gallery__tag--active').innerHTML;
-    document.querySelector(`#${text}`).classList.add("gallery__images--active");
+    let activeTag = document.querySelector('.gallery__tag.gallery__tag--active').innerHTML;
+    document.querySelector(`#${activeTag}`).classList.add("gallery__images--active");
 }

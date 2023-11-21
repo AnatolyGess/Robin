@@ -641,3 +641,62 @@ a {
     text-align: center;
   }
 }
+
+/* --------- Feedback ----------------------------------------------- */
+
+.contact {
+  padding: 120px 0;
+}
+.contact__container {
+  margin: 0 auto;
+  max-width: 1076px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  padding: 0 40px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form button {
+  color: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
+  background-color: #5221e6;
+  padding: 24px 36px;
+  cursor: pointer;
+}
+.form__label {
+  margin-bottom: 8px;
+}
+.contact__input {
+  margin-bottom: 40px;
+  background-color: #181823;
+  min-height: 50px;
+  padding-left: 10px;
+  color: inherit;
+}
+.form textarea {
+  padding: 10px;
+  min-height: 100px;
+}
+@media screen and (max-width: 1439px) {
+  .contact {
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    padding: 48px 0;
+  }
+  .contact__container {
+    padding: 0 20px;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* --------- Contact ----------------------------------------------- */
