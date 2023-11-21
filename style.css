@@ -648,7 +648,6 @@ a {
   padding: 120px 0;
 }
 .contact__container {
-  margin: 0 auto;
   max-width: 1076px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -700,3 +699,66 @@ a {
 }
 
 /* --------- Contact ----------------------------------------------- */
+
+.footer {
+  padding: 80px 0;
+  background-color: #181823;
+}
+.footer__container {
+  padding: 0 72px;
+  max-width: 1296px;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo {
+  margin-bottom: 32px;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer__social-item {
+  transition: transform 0.3s linear;
+}
+.footer__social-item:hover {
+  transform: scale(1.5);
+}
+.footer__right {
+  display: flex;
+  flex: 0 1 392px;
+  margin-bottom: 46px;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 196px;
+}
+.footer__menu-item a {
+  display: inline-block;
+  line-height: 1.5;
+  min-height: 48px;
+}
+.footer__menu-item a:hover {
+  text-decoration: underline;
+}
+.footer__copy {
+  color: #8491a0;
+  line-height: 1.5;
+}
+@media screen and (max-width: 1439px) {
+  .footer__container {
+    padding: 0 40;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 48px 0;
+    background-color: #181823;
+  }
+  .footer__container {
+    padding: 0 20px;
+  }
+}
