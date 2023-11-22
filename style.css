@@ -1,6 +1,7 @@
 body {
   font-family: Sen, Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 400;
+  font-size: 16px;
   color: #fff;
   background-color: #000;
 }
@@ -11,20 +12,24 @@ a {
   margin: 0 auto;
   max-width: 1440px;
 }
+
 /* --------- General ----------------------------------------------- */
 
-/* Like name expirience section */
 .title {
-  color: #8491a0;
-  font-size: 16px;
+  margin-bottom: 8px;
   font-weight: 700;
   line-height: 1.5;
+  color: #8491a0;
   text-transform: uppercase;
-  margin-bottom: 8px;
 }
 .subtitle {
   font-size: 55px;
   font-weight: 700;
+}
+.description {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #8491a0;
 }
 @media screen and (max-width: 767px) {
   .subtitle {
@@ -43,26 +48,9 @@ a {
   color: #e95d90;
 }
 
-/* Like left text in Skillset */
-.title-subtitle__t {
-  font-size: 55px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-.title-subtitle__s {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #8491a0;
-}
-@media screen and (max-width: 767px) {
-  .title-subtitle__t {
-    font-size: 32px;
-  }
-}
-
-/* Link with the line like "More about me" in philosophy*/
-.link-with-line_white,
-.link-with-line {
+/* Link with the line like "More about me" in philosophy */
+.link-with-line,
+.link-with-line_white {
   color: #181823;
   line-height: 1.5;
   position: relative;
@@ -72,8 +60,8 @@ a {
 .link-with-line_white {
   color: inherit;
 }
-.link-with-line_white::before,
-.link-with-line::before {
+.link-with-line::before,
+.link-with-line_white::before {
   content: "";
   position: absolute;
   left: 0;
@@ -81,6 +69,12 @@ a {
   width: 100%;
   height: 1px;
   background-color: #8491a0;
+  transition: transform 0.3s linear;
+}
+.link-with-line:hover::before,
+.link-with-line_white:hover::before {
+  transform: scale(0.8);
+  height: 2px;
 }
 
 /* Color section */
@@ -92,16 +86,12 @@ a {
   padding: 120px 70px;
 }
 .color-section__title {
-  font-size: 55px;
-  font-weight: 700;
   color: #181823;
   margin-bottom: 24px;
 }
-.color-section__text {
-  font-size: 18px;
-  line-height: 1.5;
+.color-section__desc {
   color: #5b6876;
-  margin-bottom: 134px;
+  margin-bottom: 130px;
 }
 .color-section__image img {
   width: 100%;
@@ -113,11 +103,6 @@ a {
     padding: 80px 40px;
   }
 }
-@media screen and (max-width: 1023px) {
-  .color-section__text {
-    margin-bottom: 67px;
-  }
-}
 @media screen and (max-width: 767px) {
   .color-section__content {
     padding: 50px 20px;
@@ -125,8 +110,8 @@ a {
   .color-section {
     grid-template-columns: 1fr;
   }
-  .color-section__title {
-    font-size: 32px;
+  .color-section__text {
+    margin-bottom: 70px;
   }
 }
 
@@ -140,7 +125,8 @@ a {
   background-color: inherit;
   cursor: pointer;
 }
-/* --------- Common blocks----------------------------------------------- */
+
+/* --------------- HEADER --------------- */
 
 .header {
   position: fixed;
@@ -192,7 +178,8 @@ a {
     display: none;
   }
 }
-/* --------- Header ----------------------------------------------- */
+
+/* --------------- HERO --------------- */
 
 .hero {
   padding: 166px 40px 84px 0px;
@@ -257,7 +244,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .hero {
-    padding: 72px 0 0 0;
+    padding-top: 72px;
   }
   .hero__container {
     flex-direction: column;
@@ -280,16 +267,19 @@ a {
     margin: 0 0 16px 0;
   }
 }
-/* --------- Hero ----------------------------------------------- */
+
+/* --------------- EXPIRIENCE --------------- */
 
 .expirience__container {
   padding: 120px 72px;
 }
-.expirience__title {
+.expirience__top {
+  margin-bottom: 40px;
+}
+.expirience__subtitle {
   max-width: 690px;
 }
 .expirience__list {
-  margin-top: 40px;
   display: flex;
   column-gap: 100px;
 }
@@ -307,9 +297,9 @@ a {
   margin-bottom: 22px;
 }
 .item-expirience__text {
+  max-width: 360px;
   line-height: 1.5;
   color: #8491a0;
-  max-width: 360px;
 }
 @media screen and (max-width: 1439px) {
   .expirience__container {
@@ -331,20 +321,23 @@ a {
     max-width: none;
   }
 }
-/* --------- Expirience ----------------------------------------------- */
+/* --------------- PHILOSOPHY / Color section --------------- */
 
 .philosophy {
   background-color: #fff3e4;
   color: #181823;
 }
 
-/* --------- Philosophy ----------------------------------------------- */
+/* --------------- SKILLSET --------------- */
 
 .skillset__container {
   padding: 120px 120px 120px 72px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 72px;
+}
+.skillset__text-title {
+  margin-bottom: 24px;
 }
 .skillset__items {
   display: grid;
@@ -391,7 +384,8 @@ a {
     max-width: none;
   }
 }
-/* --------- Skillset ----------------------------------------------- */
+
+/* --------------- COMPANIES --------------- */
 
 .companies__container {
   padding: 0 72px;
@@ -412,7 +406,8 @@ a {
     grid-template-rows: repeat(3, 1fr);
   }
 }
-/* --------- Companies ----------------------------------------------- */
+
+/* --------------- PROJECTS --------------- */
 
 .projects__container {
   padding: 120px 72px;
@@ -425,10 +420,13 @@ a {
   flex-direction: column;
   row-gap: 24px;
 }
-.projects__item {
+.projects__header {
+  margin-bottom: 50px;
+}
+.card-projects {
   transition: transform 0.3s;
 }
-.projects__item:hover {
+.card-projects:hover {
   transform: scale(0.99);
 }
 .card-projects__img img {
@@ -447,11 +445,6 @@ a {
   font-weight: 700;
   line-height: 1.5;
 }
-.card-projects__subtitle {
-  color: #8491a0;
-  font-size: 18px;
-  line-height: 1.5;
-}
 .projects__btn {
   padding: 24px 32px;
   margin: auto;
@@ -468,28 +461,32 @@ a {
 }
 @media screen and (max-width: 767px) {
   .projects__container {
+    padding: 50px 20px;
     display: flex;
     flex-direction: column;
   }
-}
-@media screen and (max-width: 767px) {
-  .projects__container {
-    padding: 40px 20px;
+  .projects__header {
+    margin-bottom: 25px;
   }
 }
-/* --------- Projects ----------------------------------------------- */
+
+/* --------------- INSTAGRAM / Color section --------------- */
 
 .instagram {
   background-color: #fbe4ff;
   color: #181823;
 }
-/* --------- Instagram ----------------------------------------------- */
+
+/* --------------- DRIBBBLE --------------- */
 
 .dribbble__container {
   padding: 120px 182px;
 }
 .dribbble__text {
   margin-bottom: 120px;
+}
+.dribbble__title {
+  margin-bottom: 24px;
 }
 .dribbble__subtitle {
   margin-bottom: 40px;
@@ -514,7 +511,8 @@ a {
     padding: 60px 20px;
   }
 }
-/* --------- Dribbble ----------------------------------------------- */
+
+/* --------------- FEEDBACK --------------- */
 
 .feedback__container {
   padding: 120px 72px;
@@ -525,7 +523,10 @@ a {
 .feedback__col:not(:last-child) {
   margin-bottom: 68px;
 }
-.feedback__subtitle:not(:last-child) {
+.feedback__title {
+  margin-bottom: 24px;
+}
+.feedback__desc:not(:last-child) {
   margin-bottom: 40px;
 }
 .card-feedback:not(:last-child) {
@@ -582,10 +583,14 @@ a {
     margin-bottom: 16px;
   }
 }
-/* --------- Feedback ----------------------------------------------- */
+
+/* --------------- PHOTO --------------- */
 
 .photo__container {
   padding: 120px 72px;
+}
+.photo__title {
+  margin-bottom: 24px;
 }
 .photo__gallery {
   margin-top: 64px;
@@ -642,7 +647,7 @@ a {
   }
 }
 
-/* --------- Feedback ----------------------------------------------- */
+/* --------------- CONTACT --------------- */
 
 .contact {
   padding: 120px 0;
@@ -653,6 +658,9 @@ a {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   padding: 0 40px;
+}
+.contact__title {
+  margin-bottom: 24px;
 }
 .form {
   display: flex;
@@ -698,7 +706,7 @@ a {
   }
 }
 
-/* --------- Contact ----------------------------------------------- */
+/* --------------- FOOTER --------------- */
 
 .footer {
   padding: 80px 0;
