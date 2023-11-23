@@ -126,11 +126,14 @@ a {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* Class for JS */
 .dark {
   background-color: #000;
 }
 
+=======
+>>>>>>> dc0db70d78c0e5078584bd021557fb3036e0c896
 /* --------------- HEADER --------------- */
 
 .header {
