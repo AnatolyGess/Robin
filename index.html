@@ -546,20 +546,24 @@
               interested to work with me.
             </p>
           </div>
-          <form action="#" class="contact__form form" method="post">
+          <form action="#!" class="contact__form form" method="post">
             <label for="name" class="form__label">Name</label>
             <input
               type="text"
               id="name"
               name="user-name"
               class="contact__input"
+              pattern="[A-Za-zА-Яа-яЁё]"
+              minlength="2"
+              required
             />
             <label for="email" class="form__label">Email</label>
             <input
-              type="text"
+              type="email"
               id="email"
               name="user-email"
               class="contact__input"
+              required
             />
             <label for="message" class="form__label">Message</label>
             <textarea

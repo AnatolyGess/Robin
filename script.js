@@ -1,3 +1,16 @@
+// Change header background here
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', changeHeaderBackground);
+
+function changeHeaderBackground() {
+    const windowScrollTop = window.pageYOffset;
+
+    windowScrollTop < 1 ? header.classList.remove('dark') : header.classList.add('dark');
+}
+
+
+// Photo`s gallery moment
 const galleryTagList = document.querySelectorAll('.gallery__tag');
 const galleryImagesList = document.querySelectorAll('.gallery__images');
 
@@ -13,6 +26,6 @@ function galleryToggler(event) {
         e.classList.remove('gallery__images--active');
     });
 
-    let activeTag = document.querySelector('.gallery__tag.gallery__tag--active').innerHTML;
+    const activeTag = document.querySelector('.gallery__tag.gallery__tag--active').innerHTML;
     document.querySelector(`#${activeTag}`).classList.add("gallery__images--active");
 }

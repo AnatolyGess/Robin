@@ -126,6 +126,11 @@ a {
   cursor: pointer;
 }
 
+/* Class for JS */
+.dark {
+  background-color: #000;
+}
+
 /* --------------- HEADER --------------- */
 
 .header {
@@ -758,7 +763,7 @@ a {
 }
 @media screen and (max-width: 1439px) {
   .footer__container {
-    padding: 0 40;
+    padding: 0 40px;
   }
 }
 @media screen and (max-width: 767px) {
