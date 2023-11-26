@@ -11,29 +11,31 @@
     <link rel="stylesheet" href="style.css" />
     <title>Robin.W</title>
   </head>
-  <body>
+  <body class="body">
     <header class="header">
-      <div class="header__container _wrapper">
+      <div class="header__container">
         <div class="header__img">
           <img src="./img/logo.svg" alt="Robin.W" />
         </div>
-        <nav class="header__nav">
+        <nav class="header__nav menu">
           <ul class="header__list">
             <li class="header__item">
-              <a class="header__link" href="#!">Experience</a>
+              <a class="header__link" href="#expirience">Experience</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#!">Work</a>
+              <a class="header__link" href="#work">Work</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#!">Photography</a>
+              <a class="header__link" href="#photo">Photography</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#!">Contact</a>
+              <a class="header__link" href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
-        <button class="header__button"></button>
+        <button type="button" class="burger-btn">
+          <span></span>
+        </button>
       </div>
     </header>
     <main class="main">
@@ -56,7 +58,7 @@
           </div>
         </div>
       </section>
-      <section class="expirience">
+      <section class="expirience" id="expirience">
         <div class="_wrapper">
           <div class="expirience__container">
             <div class="expirience__top">
@@ -209,7 +211,7 @@
           </div>
         </div>
       </div>
-      <section class="projects">
+      <section class="projects" id="work">
         <div class="_wrapper">
           <div class="projects__container">
             <div class="project__col">
@@ -424,7 +426,7 @@
           </ul>
         </div>
       </section>
-      <section class="photo">
+      <section class="photo" id="photo">
         <div class="_wrapper">
           <div class="photo__container">
             <h2 class="photo__title subtitle">Photography</h2>
@@ -537,7 +539,7 @@
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="contact__container _wrapper">
           <div class="contact__content">
             <h2 class="contact__title subtitle">Let’s get started</h2>

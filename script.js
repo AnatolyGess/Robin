@@ -1,3 +1,17 @@
+// Burger button
+const body = document.querySelector('body');
+const burgerBtn = document.querySelector('.burger-btn');
+const headerNav = document.querySelector('.header__nav');
+
+burgerBtn.addEventListener('click', changeBurgerBtn);
+
+function changeBurgerBtn() {
+    body.classList.toggle('active-menu');
+    burgerBtn.classList.toggle('active-menu');
+    headerNav.classList.toggle('active-menu');
+}
+
+
 // Change header background here
 const header = document.querySelector('.header');
 
