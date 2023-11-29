@@ -1,2 +1,2 @@
 # Robin
-Solution https://anatolygess.github.io/Robin-W/
+Solution https://anatolygess.github.io/Robin/
